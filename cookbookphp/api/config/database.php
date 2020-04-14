@@ -3,7 +3,7 @@ class Database {
 
     // укажите свои учетные данные базы данных
     private $host = "localhost";
-    private $db_name = "cookbook2";
+    private $db_name = "cookbook";
     private $username = "postgres";
     private $password = "1234";
     public $conn;

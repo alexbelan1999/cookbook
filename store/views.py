@@ -8,7 +8,7 @@ from .serializers import StoreSerializer
 
 @api_view(['GET'])
 def get_ingredient(request):
-    response = req.get('http://127.0.0.1/cookbook/api/ingredient/read.php')
+    response = req.get('http://127.0.0.1/cookbookphp/api/ingredient/read.php')
     json = response.json()
     return Response(json)
 
