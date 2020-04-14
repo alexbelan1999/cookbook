@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+/* eslint-disable */
+exports[`First snapshot test 1`] = `
+<div>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-1 text-center"
+      >
+        <a
+          href="/"
+        >
+          <div
+            className="menuIcon"
+          />
+        </a>
+      </div>
+      <div
+        className="col-md-3 text-center"
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          <img
+            alt="logo"
+            src="logo.png"
+          />
+        </a>
+      </div>
+      <div
+        className="col-md-5"
+      >
+        <div
+          className="menu clearfix"
+        >
+
+
+          <div />
+
+        </div>
+      </div>
+      <div
+        className="col-md-2"
+      >
+        <div
+          className="cart clearfix"
+        >
+          <div
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <div
+              className="cart__icon"
+            />
+            <div
+              className="cart__text"
+            >
+              CART
+            </div>
+            <div
+              className="cart__counter"
+            >
+              0
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-md-1 text-center"
+      >
+        <div
+          className="role__text"
+        />
+        <p>
+          <a
+            href="/login"
+            onClick={[Function]}
+          >
+            <button
+              className="auth-button"
+              type="button"
+            >
+              Sign in
+            </button>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

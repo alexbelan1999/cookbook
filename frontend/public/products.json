@@ -1,0 +1,92 @@
+[
+  {
+    "id": 0,
+    "title": "Картофель",
+    "description": "100 г.",
+    "price": 3.99,
+    "picture": "https://images.lady.mail.ru/456683/",
+    "mark": [],
+    "tags": []
+  },
+  {
+    "id": 1,
+    "title": "Помидор",
+    "description": "100 г.",
+    "price": 954.99,
+    "picture": "https://img09.rl0.ru/eda/464x302i/s2.eda.ru/StaticContent/Photos/120213175629/120327163412/p_O.jpg",
+    "mark" : [],
+    "tags": []
+  },
+  {
+    "id": 2,
+    "title": "Курица",
+    "description": "100 г.",
+    "price": 335.99,
+    "picture": "https://www.patee.ru/r/x6/12/38/1a/960m.jpg",
+    "mark" : [],
+    "tags": []
+  },
+  {
+    "id": 3,
+    "title": "Курица",
+    "description": "100 г.",
+    "price": 335.99,
+    "picture": "https://www.patee.ru/r/x6/12/38/1a/960m.jpg",
+    "mark" : [],
+    "tags": []
+  },
+  {
+    "id": 4,
+    "title": "Курица",
+    "description": "100 г.",
+    "price": 335.99,
+    "picture": "https://www.patee.ru/r/x6/12/38/1a/960m.jpg",
+    "mark" : [],
+    "tags": []
+  },
+  {
+    "id": 5,
+    "title": "Курица",
+    "description": "100 г.",
+    "price": 335.99,
+    "picture": "https://www.patee.ru/r/x6/12/38/1a/960m.jpg",
+    "mark" : [],
+    "tags": []
+  },
+  {
+    "id": 6,
+    "title": "Курица",
+    "description": "100 г.",
+    "price": 335.99,
+    "picture": "https://www.patee.ru/r/x6/12/38/1a/960m.jpg",
+    "mark" : [],
+    "tags": []
+  },
+  {
+    "id": 7,
+    "title": "Курица",
+    "description": "100 г.",
+    "price": 335.99,
+    "picture": "https://www.patee.ru/r/x6/12/38/1a/960m.jpg",
+    "mark" : [],
+    "tags": []
+  },
+  {
+    "id": 8,
+    "title": "Курица",
+    "description": "100 г.",
+    "price": 335.99,
+    "picture": "https://www.patee.ru/r/x6/12/38/1a/960m.jpg",
+    "mark" : [],
+    "tags": []
+  },
+  {
+    "id": 9,
+    "title": "Курица",
+    "description": "100 г.",
+    "price": 335.99,
+    "picture": "https://www.patee.ru/r/x6/12/38/1a/960m.jpg",
+    "mark" : [],
+    "tags": []
+  }
+]
