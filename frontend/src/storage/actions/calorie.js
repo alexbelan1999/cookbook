@@ -31,7 +31,7 @@ export const setCalories = createAction('SET_CALORIE', (calories) => ({
 }));
 
 export const loadData = () => (dispatch) => {
-  axios.get('/calories.json').then(({ data }) => {
+  axios.get('http://127.0.0.1/cookbookphp/api/ingredient/read.php').then(({ data }) => {
     dispatch(setCalories(data.ingredients));
   });
 };

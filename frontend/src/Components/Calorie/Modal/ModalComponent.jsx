@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 import {
   Formik, Form, Field, ErrorMessage,
 } from 'formik';
+import axios from '../../../axiosInstance';
 
 class ModalComponent extends React.Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class ModalComponent extends React.Component {
 
   toggle() {
     this.setState((prevState) => ({
+      id: Math.floor(Math.random() * (1000 - 20)) + 1000,
       modal: !prevState.modal,
     }));
   }
@@ -39,6 +41,7 @@ class ModalComponent extends React.Component {
       [name]: value,
     });
   }
+
 
   render() {
     const {
@@ -113,6 +116,17 @@ class ModalComponent extends React.Component {
                   carbohydrates: parseFloat(values.carbohydrates),
                 };
                 addCalorie(newCalorie);
+                const ingredients = { ingredients: newCalorie };
+                const objJSON = JSON.stringify(ingredients);
+                /* eslint-disable */
+                console.log(objJSON);
+                axios.post('http://127.0.0.1/cookbookphp/api/ingredient/create.php', objJSON)
+                .then(function (response) {
+                  console.log(response);
+                })
+                .catch(function (error) {
+                  console.log(error);
+                });
                 this.toggle();
               }}
             >

@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 import {
   Formik, Form, Field, ErrorMessage,
 } from 'formik';
+import axios from '../../../../axiosInstance';
 
 class ModalComponent extends React.Component {
   constructor(props) {
@@ -56,6 +57,15 @@ class ModalComponent extends React.Component {
       removeCalorie, id, setPageCount, calories, currentPage, setCurrentPage,
     } = this.props;
     removeCalorie(id);
+    const url = `http://127.0.0.1/cookbookphp/api/ingredient/delete.php?id=${id}`;
+    /* eslint-disable */
+    axios.delete(url)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     const indexOfLastProduct = currentPage * 8;
     const indexOfFirstProduct = indexOfLastProduct - 8;
     if (
@@ -150,6 +160,17 @@ class ModalComponent extends React.Component {
                   carbohydrates: parseFloat(values.carbohydrates),
                 };
                 changeCalorie(id, newCalorie);
+                const ingredients = { ingredients: newCalorie };
+                const objJSON = JSON.stringify(ingredients);
+                /* eslint-disable */
+                console.log(objJSON);
+                axios.put('http://127.0.0.1/cookbookphp/api/ingredient/update.php', objJSON)
+                .then(function (response) {
+                  console.log(response);
+                })
+                .catch(function (error) {
+                  console.log(error);
+                });
                 this.toggle();
               }}
             >
