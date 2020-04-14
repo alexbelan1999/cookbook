@@ -13,11 +13,11 @@ class AccountPageComponent extends Component {
     const { user, userSwitch } = this.props;
     this.state = {
       id: user.id,
-      login: user.login,
+      login: user.patronymic,
       password: user.password,
-      name: user['first name'],
-      surname: user['last name'],
-      email: user['e-mail'],
+      name: user.name,
+      surname: user.surname,
+      email: user.login,
       removeRequest: user['remove request'],
       role: user.role,
       userRole: userSwitch,
@@ -113,12 +113,12 @@ class AccountPageComponent extends Component {
                         color: 'black',
                         labelPosition: 'left',
                         icon: 'circle outline',
-                        content: 'e-mail',
+                        content: 'patronymic',
                       }}
-                      name="email"
+                      name="login"
                       actionPosition="left"
-                      placeholder="e-mail"
-                      defaultValue={email}
+                      placeholder="login"
+                      defaultValue={login}
                       onChange={this.handleChange}
                     />
                     <Input
@@ -128,10 +128,10 @@ class AccountPageComponent extends Component {
                         icon: 'circle outline',
                         content: 'login',
                       }}
-                      name="login"
+                      name="email"
                       actionPosition="left"
-                      placeholder="login"
-                      defaultValue={login}
+                      placeholder="e-mail"
+                      defaultValue={email}
                       onChange={this.handleChange}
                     />
                     <Input

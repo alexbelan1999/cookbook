@@ -12,7 +12,7 @@ const mapStateToProps = ({ cart, bank, authorization }) => ({
     parseFloat((cart.items.reduce((total, product) => total + product.price, 0)).toFixed(3)),
   count: cart.items.length,
   items: cart.items,
-  account: searchBank(bank.items, authorization.id),
+  account: searchBank(bank.items, authorization.bankId),
   cash: searchBank(bank.items, 999),
   isReady: bank.isReady,
   isLoaded: bank.isLoaded,

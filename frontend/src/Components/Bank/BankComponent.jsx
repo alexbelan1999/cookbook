@@ -14,9 +14,9 @@ class BankComponent extends Component {
     super(props);
     const { account } = this.props;
     this.state = {
-      number: account.number,
-      ccv: account.ccv,
-      money: account.money,
+      card_number: account.card_number,
+      csv: account.csv,
+      balance: account.balance,
       modal: false,
       message: '',
     };
@@ -50,7 +50,7 @@ class BankComponent extends Component {
         message: 'ваша корзина пуста',
       });
     } else
-    if (totalPrice > account.money) {
+    if (totalPrice > account.balance) {
       this.setState({
         message: 'недостаточно средств на счёте',
       });
@@ -58,24 +58,23 @@ class BankComponent extends Component {
       this.setState({
         message: `оплачено : ${totalPrice}`,
       });
-      account.money -= totalPrice;
-      cash.money += totalPrice;
+      account.balance -= totalPrice;
+      cash.balance += totalPrice;
       changeBank(account.id, account);
       changeBank(cash.id, cash);
       clearCart();
       this.setState({
-        money: account.money,
+        balance: account.balance,
       });
       let str = new Date();
-      /* eslint-disable */
       const reg = /\d+/g;
       str = String(str).match(reg);
       addTransaction(
         {
-          from: account.number,
-          to: cash.number,
+          from: account.card_number,
+          to: cash.card_number,
           sum: totalPrice,
-          time: str[2]+"-"+str[1]+"-"+str[0]+" "+str[3]+":"+str[4]+":"+str[5],
+          time: `${str[2]}-${str[1]}-${str[0]} ${str[3]}:${str[4]}:${str[5]}`,
         },
       );
     }
@@ -92,9 +91,11 @@ class BankComponent extends Component {
     const {
       isReady, totalPrice, cash, role, transactions,
     } = this.props;
+    /* eslint-disable */
     const {
-      number, ccv, money, modal, message,
+      card_number, csv, balance, modal, message,
     } = this.state;
+    /* eslint-enable */
     return (
       <div>
         <div className="header__content">
@@ -106,12 +107,12 @@ class BankComponent extends Component {
               Банк
             </div>
             {/* eslint-disable */}
-            { (role === 'admin' && cash.money > 0)
+            { (role === 'admin' && cash.balance > 0)
               ? (
                 <div className="button__container cash_block">
                   <div className="cash">
                     $$$ CASH $$$:&#8195;
-                    {cash.money.toFixed(3)}
+                    {cash.balance.toFixed(3)}
                   </div>
                 </div>
               ) : (role === 'admin')
@@ -119,7 +120,7 @@ class BankComponent extends Component {
                   <div className="button__container cash_block">
                     <div className="cash__null">
                       CASH:&#8195;
-                      {cash.money}
+                      {cash.balance}
                     </div>
                   </div>
                 ) : ''}
@@ -135,10 +136,10 @@ class BankComponent extends Component {
                         icon: 'circle outline',
                         content: 'номер карты',
                       }}
-                      name="number"
+                      name="card_number"
                       actionPosition="left"
-                      placeholder="number"
-                      value={number}
+                      placeholder="card_number"
+                      value={card_number}
                       onChange={this.handleChange}
                       disabled="disabled"
                     />
@@ -147,12 +148,12 @@ class BankComponent extends Component {
                         color: 'black',
                         labelPosition: 'left',
                         icon: 'circle outline',
-                        content: 'ccv',
+                        content: 'csv',
                       }}
-                      name="ccv"
+                      name="csv"
                       actionPosition="left"
-                      placeholder="ccv"
-                      value={ccv}
+                      placeholder="csv"
+                      value={csv}
                       onChange={this.handleChange}
                       disabled="disabled"
                     />
@@ -163,10 +164,10 @@ class BankComponent extends Component {
                         icon: 'circle outline',
                         content: 'деньги',
                       }}
-                      name="money"
+                      name="balance"
                       actionPosition="left"
-                      placeholder="money"
-                      value={money.toFixed(3)}
+                      placeholder="balance"
+                      value={balance.toFixed(3)}
                       onChange={this.handleChange}
                       disabled
                     />
@@ -225,7 +226,7 @@ class BankComponent extends Component {
     );
   }
 }
-/* eslint-disable */
+
 BankComponent.propTypes = {
   role: PropTypes.string.isRequired,
   clearCart: PropTypes.func.isRequired,
@@ -237,10 +238,10 @@ BankComponent.propTypes = {
   isLoaded: PropTypes.bool.isRequired,
   isReady: PropTypes.bool.isRequired,
   loadDataBank: PropTypes.func.isRequired,
-  number: PropTypes.number.isRequired,
-  ccv: PropTypes.number.isRequired,
+  card_number: PropTypes.number.isRequired,
+  csv: PropTypes.number.isRequired,
   totalPrice: PropTypes.number.isRequired,
-  money: PropTypes.number.isRequired,
+  balance: PropTypes.number.isRequired,
   changeBank: PropTypes.func.isRequired,
 };
 

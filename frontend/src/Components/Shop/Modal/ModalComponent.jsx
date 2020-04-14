@@ -53,6 +53,7 @@ class ModalComponent extends React.Component {
 
   toggle() {
     this.setState((prevState) => ({
+      id: Math.floor(Math.random() * (1000 - 20)) + 1000,
       modal: !prevState.modal,
     }));
   }

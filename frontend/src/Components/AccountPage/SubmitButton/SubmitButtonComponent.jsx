@@ -24,11 +24,11 @@ class SubmitButtonComponent extends Component {
     } = this.props;
     const user = {
       id,
-      'first name': name,
-      'last name': surname,
-      'e-mail': email,
+      Name: name,
+      Surname: surname,
+      login: email,
       'remove request': removeRequest,
-      login,
+      Patronymic: login,
       password,
       role,
     };

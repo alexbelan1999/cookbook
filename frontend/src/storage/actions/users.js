@@ -32,6 +32,6 @@ export const setUsers = createAction('SET_USERS', (users) => ({
 
 export const loadData = () => (dispatch) => {
   axios.get('/users.json').then(({ data }) => {
-    dispatch(setUsers(data));
+    dispatch(setUsers(data.users));
   });
 };

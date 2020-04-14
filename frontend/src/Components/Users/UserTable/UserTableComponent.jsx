@@ -59,7 +59,7 @@ class UserTableComponent extends Component {
   handleChange = (e, user) => {
     const { changeUser } = this.props;
     const newUser = { ...user };
-    newUser.role = e.target.value;
+    newUser.role_id = (e.target.value === 'admin') ? 1 : 2;
     changeUser(user.id, newUser);
   };
 
@@ -97,6 +97,7 @@ class UserTableComponent extends Component {
                   <th>Id</th>
                   <th>First Name</th>
                   <th>Last Name</th>
+                  <th>Patronymic</th>
                   <th>Email</th>
                   <th>Role</th>
                   <th>Remove request</th>
@@ -106,12 +107,13 @@ class UserTableComponent extends Component {
                   : users.slice(indexOfFirstUser, indexOfLastUser).map((user) => (
                     <tr>
                       <td>{user.id}</td>
-                      <td>{user['first name']}</td>
-                      <td>{user['last name']}</td>
-                      <td>{user['e-mail']}</td>
+                      <td>{user.name}</td>
+                      <td>{user.surname}</td>
+                      <td>{user.patronymic}</td>
+                      <td>{user.login}</td>
                       <td>
                         <select className="select" onChange={(e) => this.handleChange(e, user)}>
-                          <option value="" selected disabled hidden>{user.role}</option>
+                          <option value="" selected disabled hidden>{(user.role_id === 1) ? 'admin' : 'user'}</option>
                           <option>admin</option>
                           <option>user</option>
                         </select>

@@ -1,9 +1,10 @@
 import { createAction } from 'redux-actions';
 
-export const login = createAction('LOGIN', (id, log, role) => ({
+export const login = createAction('LOGIN', (id, log, role, bankId) => ({
   id,
   log,
   role,
+  bankId,
 }));
 
 export const logout = createAction('LOGOUT', () => ({

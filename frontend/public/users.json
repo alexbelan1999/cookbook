@@ -1,172 +1,44 @@
-[
-  {
-    "id": 0,
-    "first name": "Maxim",
-    "last name": "Vasilevskiy",
-    "e-mail": "maksimvasilevskiy@mail.ru",
-    "remove request": false,
-    "login": "maxim123",
-    "password": "maxim123",
-    "role": "admin"
-  },
-  {
-    "id": 1,
-    "first name": "Alexander",
-    "last name": "Miranovich",
-    "e-mail": "alexandermiranovich@mail.ru",
-    "remove request": true,
-    "login": "alex123",
-    "password": "alex123",
-    "role": "user"
-  },
-  {
-    "id": 2,
-    "first name": "Vadim",
-    "last name": "Sergeev",
-    "e-mail": "vadimsergeev@mail.ru",
-    "remove request": false,
-    "login": "vadim123",
-    "password": "vadim123",
-    "role": "user"
-  },
-  {
-    "id": 3,
-    "first name": "Valeriya",
-    "last name": "Sharova",
-    "e-mail": "sharovavaleriya@mail.ru",
-    "remove request": false,
-    "login": "lera123",
-    "password": "lera123",
-    "role": "user"
-  },
-  {
-    "id": 4,
-    "first name": "Petr",
-    "last name": "Ivanov",
-    "e-mail": "petrivanov@mail.ru",
-    "remove request": false,
-    "login": "petya123",
-    "password": "petya132",
-    "role": "user"
-  },
-  {
-    "id": 5,
-    "first name": "Igor",
-    "last name": "Leonov",
-    "e-mail": "leonovigor@mail.ru",
-    "remove request": false,
-    "login": "igor123",
-    "password": "igor123",
-    "role": "user"
-  },
-  {
-    "id": 6,
-    "first name": "Alexander",
-    "last name": "Nikitin",
-    "e-mail": "alexandernikitin@mail.ru",
-    "remove request": false,
-    "login": "alex456",
-    "password": "alex456",
-    "role": "user"
-  },
-  {
-    "id": 7,
-    "first name": "Alexandra",
-    "last name": "Suslova",
-    "e-mail": "alexandrasuslova@mail.ru",
-    "remove request": true,
-    "login": "raf123",
-    "password": "raf123",
-    "role": "user"
-  },
-  {
-    "id": 8,
-    "first name": "Roman",
-    "last name": "Dorenskiy",
-    "e-mail": "dorenskiy.Rom4ik@mail.ru",
-    "remove request": false,
-    "login": "roman123",
-    "password": "roman123",
-    "role": "user"
-  },
-  {
-    "id": 9,
-    "first name": "Veronika",
-    "last name": "Bazyanova",
-    "e-mail": "beautya@rambler.ru",
-    "remove request": false,
-    "login": "veronika456",
-    "password": "veronika456",
-    "role": "user"
-  },
-  {
-    "id": 10,
-    "first name": "Maxim",
-    "last name": "Trifonov",
-    "e-mail": "trim7@ru.ru",
-    "remove request": false,
-    "login": "maxim456",
-    "password": "maxim456",
-    "role": "user"
-  },
-  {
-    "id": 11,
-    "first name": "Mihail",
-    "last name": "Gurtovoi",
-    "e-mail": "admiral17@mail.ru",
-    "remove request": false,
-    "login": "mihail456",
-    "password": "mihail456",
-    "role": "user"
-  },
-  {
-    "id": 12,
-    "first name": "Olesya",
-    "last name": "Gahovskaya",
-    "e-mail": "real-dv@mail.ru",
-    "remove request": false,
-    "login": "olesya456",
-    "password": "olesya456",
-    "role": "user"
-  },
-  {
-    "id": 13,
-    "first name": "Andrey",
-    "last name": "Shtern",
-    "e-mail": "stern@spb.ru",
-    "remove request": false,
-    "login": "andrey456",
-    "password": "andrey456",
-    "role": "user"
-  },
-  {
-    "id": 14,
-    "first name": "Vladimir",
-    "last name": "Zeydin",
-    "e-mail": "ya-zews@mail.ru",
-    "remove request": false,
-    "login": "vladimir456",
-    "password": "vladimir456",
-    "role": "user"
-  },
-  {
-    "id": 15,
-    "first name": "Ruslan",
-    "last name": "Aliyev",
-    "e-mail": "aliev_rusik@mail.ru",
-    "remove request": false,
-    "login": "ruslan456",
-    "password": "ruslan456",
-    "role": "user"
-  },
-  {
-    "id": 16,
-    "first name": "Anna",
-    "last name": "Zimina",
-    "e-mail": "kropal.85@mail.ru",
-    "remove request": false,
-    "login": "anna456",
-    "password": "anna456",
-    "role": "user"
-  }
-]
+{
+    "users": [
+        {
+            "id": 1,
+            "surname": "Белан",
+            "name": "Алексей",
+            "patronymic": "Витальевич",
+            "login": "belan@gmail.com",
+            "password": "12345678",
+            "account_id": 1000,
+            "role_id": 1
+        },
+        {
+            "id": 2,
+            "surname": "Моисейченков",
+            "name": "Дмитрий",
+            "patronymic": "Юрьевич",
+            "login": "dima@gmail.com",
+            "password": "87654321",
+            "account_id": 1001,
+            "role_id": 2
+        },
+        {
+            "id": 3,
+            "surname": "Василевский",
+            "name": "Максим",
+            "patronymic": "Владимирович",
+            "login": "maks@gmail.com",
+            "password": "10203040",
+            "account_id": 1002,
+            "role_id": 2
+        },
+        {
+            "id": 4,
+            "surname": "Лапенко",
+            "name": "Антон",
+            "patronymic": "Вячеславович",
+            "login": "lapenko@gmail.com",
+            "password": "11111111",
+            "account_id": 1003,
+            "role_id": 3
+        }
+    ]
+}

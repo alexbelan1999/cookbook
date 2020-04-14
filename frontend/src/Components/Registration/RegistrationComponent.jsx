@@ -58,7 +58,7 @@ class RegistrationComponent extends Component {
     const {
       password, fullName, surname, email, log,
     } = fields;
-    const { addUser, login } = this.props;
+    const { addUser, login, addBank } = this.props;
     const user = {
       id: Math.floor(Math.random() * (200 - 20)) + 200,
       'first name': fullName,
@@ -71,8 +71,31 @@ class RegistrationComponent extends Component {
     };
     event.preventDefault();
     if (validateForm(errors, fields)) {
-      addUser(user);
-      login(user.id, user.login, user.role);
+      const s = '0123456789';
+      const number = Array(10).join().split(',').map(() => s.charAt(Math.floor(Math.random() * s.length)))
+        .join('');
+      const csv = Array(3).join().split(',').map(() => s.charAt(Math.floor(Math.random() * s.length)))
+        .join('');
+      const newBank = {
+        id: Math.floor(Math.random() * (200 - 20)) + 200,
+        card_number: number,
+        csv: parseFloat(csv),
+        balance: 1000,
+      };
+      addBank(newBank);
+      const newUser = {
+        id: user.id,
+        name: user['first name'],
+        surname: user['last name'],
+        login: user['e-mail'],
+        'remove request': false,
+        patronymic: log,
+        password,
+        role: 'user',
+        account_id: newBank.id,
+      };
+      addUser(newUser);
+      login(user.id, newUser.Name, user.role, newBank.id);
       this.setState({ redirect: true });
     }
   }
@@ -151,15 +174,15 @@ class RegistrationComponent extends Component {
                     </div>
                     <div className="loginForm">
                       <input
-                        className="loginForm__input"
+                        name="email"
                         placeholder="login"
-                        name="log"
-                        required
                         onChange={this.handleChange}
+                        className="loginForm__input"
+                        noValidate
                       />
                       <div className="form__message">
-                        {errors.log.length && log.length ? (
-                          <p className="error">{errors.log}</p>
+                        {errors.email.length && email.length ? (
+                          <p className="error">{errors.email}</p>
                         ) : ''}
                       </div>
                       <input
@@ -222,15 +245,15 @@ class RegistrationComponent extends Component {
                         ) : ''}
                       </div>
                       <input
-                        name="email"
-                        placeholder="e-mail"
-                        onChange={this.handleChange}
                         className="loginForm__input"
-                        noValidate
+                        placeholder="Patronymic"
+                        name="log"
+                        required
+                        onChange={this.handleChange}
                       />
                       <div className="form__message">
-                        {errors.email.length && email.length ? (
-                          <p className="error">{errors.email}</p>
+                        {errors.log.length && log.length ? (
+                          <p className="error">{errors.log}</p>
                         ) : ''}
                       </div>
                     </div>
@@ -260,6 +283,7 @@ class RegistrationComponent extends Component {
 RegistrationComponent.propTypes = {
   addUser: PropTypes.func.isRequired,
   login: PropTypes.func.isRequired,
+  addBank: PropTypes.func.isRequired,
   isLoaded: PropTypes.bool.isRequired,
   loadData: PropTypes.func.isRequired,
 };

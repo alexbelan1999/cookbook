@@ -7,6 +7,7 @@ export const initialState = {
   login: null,
   role: null,
   userSwitch: false,
+  bankId: 0,
 };
 
 export default handleActions({
@@ -19,7 +20,8 @@ export default handleActions({
     ...state,
     id: action.payload.id,
     login: action.payload.log,
-    role: action.payload.role,
+    role: (action.payload.role === 1) ? ('admin') : 'user',
+    bankId: action.payload.bankId,
     isAuth: true,
   }),
   [logout]: (state) => ({

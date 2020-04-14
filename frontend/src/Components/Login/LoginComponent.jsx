@@ -40,7 +40,9 @@ class LoginComponent extends Component {
     const { log, password } = this.state;
     const handlerAuthorize = () => {
       users.map((user) => {
-        if (user.login === log && user.password === password) login(user.id, log, user.role);
+        if (user.login === log && user.password === password) {
+          login(user.id, user.name, user.role_id, user.account_id);
+        }
         return (user);
       });
     };

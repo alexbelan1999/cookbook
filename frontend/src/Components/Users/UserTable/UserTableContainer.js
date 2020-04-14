@@ -5,9 +5,9 @@ import UserTableComponent from './UserTableComponent';
 
 
 const filterUsers = (users, searchQuery) => users.filter(
-  (o) => o['first name'].toLowerCase().indexOf(searchQuery.toLowerCase()) >= 0
-  || o['last name'].toLowerCase().indexOf(searchQuery.toLowerCase()) >= 0
-  || o['e-mail'].toLowerCase().indexOf(searchQuery.toLowerCase()) >= 0,
+  (o) => o.name.toLowerCase().indexOf(searchQuery.toLowerCase()) >= 0
+  || o.surname.toLowerCase().indexOf(searchQuery.toLowerCase()) >= 0
+  || o.login.toLowerCase().indexOf(searchQuery.toLowerCase()) >= 0,
 );
 
 const searchProducts = (
