@@ -20,7 +20,7 @@ class ModalComponent extends React.Component {
       calorie: '',
       protein: '',
       fat: '',
-      carbohydrates: '',
+      carbohydrates: 'dddd',
     };
     this.handleChange = this.handleChange.bind(this);
     this.toggle = this.toggle.bind(this);

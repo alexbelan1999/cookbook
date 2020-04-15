@@ -35,7 +35,7 @@ export const setBank = createAction('SET_BANK', (bank) => ({
 }));
 
 export const loadDataBank = () => (dispatch) => {
-  axios.get('/bank.json').then(({ data }) => {
+  axios.get('http://127.0.0.1:8000/api/bank/accounts/').then(({ data }) => {
     dispatch(setBank(data.accounts));
   });
 };

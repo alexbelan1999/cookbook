@@ -31,7 +31,7 @@ export const setUsers = createAction('SET_USERS', (users) => ({
 }));
 
 export const loadData = () => (dispatch) => {
-  axios.get('/users.json').then(({ data }) => {
+  axios.get('http://127.0.0.1:8000/api/authorization/users/').then(({ data }) => {
     dispatch(setUsers(data.users));
   });
 };
