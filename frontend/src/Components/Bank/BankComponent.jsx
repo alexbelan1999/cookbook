@@ -74,7 +74,7 @@ class BankComponent extends Component {
           from: account.card_number,
           to: cash.card_number,
           sum: totalPrice,
-          time: `${str[1]}-${str[2]}-${str[0]} ${str[3]}:${str[4]}:${str[5]}`,
+          time: `${str[2]}-${str[1]}-${str[0]} ${str[3]}:${str[4]}:${str[5]}`,
         },
       );
     }

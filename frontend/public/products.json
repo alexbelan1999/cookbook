@@ -1,92 +1,84 @@
 [
   {
-    "id": 0,
-    "title": "Картофель",
-    "description": "100 г.",
-    "price": 3.99,
-    "picture": "https://images.lady.mail.ru/456683/",
-    "mark": [],
-    "tags": []
-  },
-  {
     "id": 1,
-    "title": "Помидор",
+    "title": "Яблоко",
     "description": "100 г.",
-    "price": 954.99,
-    "picture": "https://img09.rl0.ru/eda/464x302i/s2.eda.ru/StaticContent/Photos/120213175629/120327163412/p_O.jpg",
+    "price": 1.0,
+    "picture": "https://avatars.mds.yandex.net/get-pdb/1356544/6c762095-da84-4d97-ae9b-fddf83074dc8/s1200?webp=false",
     "mark" : [],
     "tags": []
   },
   {
     "id": 2,
-    "title": "Курица",
+    "title": "Сахар",
     "description": "100 г.",
-    "price": 335.99,
-    "picture": "https://www.patee.ru/r/x6/12/38/1a/960m.jpg",
+    "price": 0.55,
+    "picture": "https://anti-aging.ua/wp-content/uploads/2016/02/16fd852caf8d65e2e0d716002eebdb9c.jpg",
     "mark" : [],
     "tags": []
   },
   {
     "id": 3,
-    "title": "Курица",
+    "title": "Мука",
     "description": "100 г.",
-    "price": 335.99,
-    "picture": "https://www.patee.ru/r/x6/12/38/1a/960m.jpg",
+    "price": 0.26,
+    "picture": "https://selo.ua/files/images/items/35/35838z1502aa83.jpg",
     "mark" : [],
     "tags": []
   },
   {
     "id": 4,
-    "title": "Курица",
+    "title": "Сливочное масло",
     "description": "100 г.",
-    "price": 335.99,
-    "picture": "https://www.patee.ru/r/x6/12/38/1a/960m.jpg",
+    "price": 0.9,
+    "picture": "https://avatars.mds.yandex.net/get-zen_doc/1710047/pub_5d09bd73caf35200ae5b20eb_5d09bf7ca0412200b1332c32/scale_1200",
     "mark" : [],
     "tags": []
   },
   {
     "id": 5,
-    "title": "Курица",
+    "title": "Яйцо",
     "description": "100 г.",
-    "price": 335.99,
-    "picture": "https://www.patee.ru/r/x6/12/38/1a/960m.jpg",
+    "price": 0.63,
+    "picture": "https://avatars.mds.yandex.net/get-zen_doc/1712263/pub_5d9c89e05d636200b1cc5c3b_5d9cace1fc69ab40ea346e0e/scale_1200",
     "mark" : [],
     "tags": []
   },
   {
     "id": 6,
-    "title": "Курица",
+    "title": "Творог",
     "description": "100 г.",
-    "price": 335.99,
-    "picture": "https://www.patee.ru/r/x6/12/38/1a/960m.jpg",
+    "price": 0.47,
+    "picture": "https://avatars.mds.yandex.net/get-zen_doc/1245815/pub_5d223e4ae3a2d600aec72c92_5d223ebc62be8800ae9e8408/scale_1200",
     "mark" : [],
     "tags": []
   },
-  {
+    {
     "id": 7,
-    "title": "Курица",
+    "title": "Кефир",
     "description": "100 г.",
-    "price": 335.99,
-    "picture": "https://www.patee.ru/r/x6/12/38/1a/960m.jpg",
+    "price": 0.48,
+    "picture": "https://avatars.mds.yandex.net/get-zen_doc/1132604/pub_5c6fb56d0708ca00c1d487a6_5c6fb58272611b00b4000969/scale_1200",
     "mark" : [],
     "tags": []
   },
   {
     "id": 8,
-    "title": "Курица",
+    "title": "Клубника",
     "description": "100 г.",
-    "price": 335.99,
-    "picture": "https://www.patee.ru/r/x6/12/38/1a/960m.jpg",
+    "price": 0.7,
+    "picture": "https://i.artfile.me/wallpaper/27-07-2016/2560x1920/eda-klubnika--zemlyanika-mnogo-yagody-1061011.jpg",
     "mark" : [],
     "tags": []
   },
-  {
+    {
     "id": 9,
-    "title": "Курица",
+    "title": "Молоко",
     "description": "100 г.",
-    "price": 335.99,
-    "picture": "https://www.patee.ru/r/x6/12/38/1a/960m.jpg",
+    "price": 0.12,
+    "picture": "https://growfood.pro/blog/wp-content/uploads/2017/11/moloko2811-2.jpg",
     "mark" : [],
     "tags": []
   }
+  
 ]
