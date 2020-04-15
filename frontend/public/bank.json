@@ -1,0 +1,34 @@
+{
+    "accounts": [
+        {
+            "id": 1000,
+            "card_number": 1234567891,
+            "csv": 100,
+            "balance": 1000.0
+        },
+        {
+            "id": 1001,
+            "card_number": 1234567892,
+            "csv": 110,
+            "balance": 1000.0
+        },
+        {
+            "id": 1002,
+            "card_number": 1234567893,
+            "csv": 111,
+            "balance": 1000.0
+        },
+        {
+            "id": 1003,
+            "card_number": 1234567894,
+            "csv": 783,
+            "balance": 100.0
+        },
+        {
+            "id": 999,
+            "card_number": 1234567895,
+            "csv": 784,
+            "balance": 100.0
+        }
+    ]
+}
